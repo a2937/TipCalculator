@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="10dp"
+    tools:context="edu.wvup.acottri9.tipcalculator.MainActivity"
+    tools:ignore="ExtraText">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bill_name"
+            style="@style/TextStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/bill_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <EditText
+            android:id="@+id/bill_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:hint="@string/bill_input"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/numOfGuests_name"
+            style="@style/TextStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/bill_input"
+            android:text="@string/numOfGuests_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <EditText
+            android:id="@+id/numOfGuests_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/bill_input"
+            android:layout_alignLeft="@+id/bill_input"
+            android:layout_alignRight="@+id/bill_input"
+            android:layout_alignStart="@+id/bill_input"
+            android:layout_below="@+id/bill_input"
+            android:hint="@string/numOfGuests_input"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/tipPercent_name"
+            style="@style/TextStyle"
+            android:layout_alignBaseline="@+id/tipPercent_input"
+            android:layout_alignBottom="@+id/tipPercent_input"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/tipPercent_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <EditText
+            android:id="@+id/tipPercent_input"
+            style="@style/TextStyle"
+            android:layout_alignEnd="@+id/numOfGuests_input"
+            android:layout_alignLeft="@+id/numOfGuests_input"
+            android:layout_alignRight="@+id/numOfGuests_input"
+            android:layout_alignStart="@+id/numOfGuests_input"
+            android:layout_below="@+id/numOfGuests_input"
+            android:hint="@string/tipPercent_input"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/isPercentBox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:onClick="calculate"
+            android:text="@string/button_calculate" />
+
+        <CheckBox
+            android:id="@+id/isPercentBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tipPercent_input"
+            android:text="@string/isPercent" />
+
+        <TextView
+            android:id="@+id/totalBillName"
+            style="@style/TextStyle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button_calculate"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/billName" />
+
+        <TextView
+            android:id="@+id/totalBillInput"
+            style="@style/TextStyle"
+            android:layout_alignEnd="@+id/tipPercent_input"
+            android:layout_alignRight="@+id/tipPercent_input"
+            android:layout_alignTop="@+id/totalBillName"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/totalBillInput" />
+
+        <TextView
+            android:id="@+id/billPerGuests"
+            style="@style/TextStyle"
+            android:layout_alignLeft="@+id/totalBillName"
+            android:layout_alignStart="@+id/totalBillName"
+            android:layout_below="@+id/totalBillName"
+            android:layout_marginTop="38dp"
+            android:text="@string/billPerGuests" />
+
+        <TextView
+            android:id="@+id/billPerGuestsInput"
+            style="@style/TextStyle"
+            android:layout_alignEnd="@+id/tipPercent_input"
+            android:layout_alignRight="@+id/tipPercent_input"
+            android:layout_alignTop="@+id/billPerGuests"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:text="@string/billPerGuestsInput" />
+
+        <TextView
+            android:id="@+id/tipPerGuests"
+            style="@style/TextStyle"
+            android:layout_alignLeft="@+id/billPerGuests"
+            android:layout_alignStart="@+id/billPerGuests"
+            android:layout_below="@+id/billPerGuests"
+            android:layout_marginTop="46dp"
+            android:text="@string/tipPerGuest" />
+
+        <TextView
+            android:id="@+id/tipPerGuestsInput"
+            style="@style/TextStyle"
+            android:layout_alignBaseline="@+id/tipPerGuests"
+            android:layout_alignBottom="@+id/tipPerGuests"
+            android:layout_alignLeft="@+id/totalBillInput"
+            android:layout_alignStart="@+id/totalBillInput"
+            android:text="@string/tipPerGuestsInput" />
+
+        <TextView
+            android:id="@+id/totalTip"
+            style="@style/TextStyle"
+            android:layout_alignLeft="@+id/billPerGuests"
+            android:layout_alignStart="@+id/billPerGuests"
+            android:layout_below="@+id/tipPerGuests"
+            android:layout_marginTop="46dp"
+            android:text="@string/totalTip" />
+
+        <TextView
+            android:id="@+id/totalTipInput"
+            style="@style/TextStyle"
+            android:layout_alignBaseline="@+id/totalTip"
+            android:layout_alignBottom="@+id/totalTip"
+            android:layout_alignLeft="@+id/totalBillInput"
+            android:layout_alignStart="@+id/totalBillInput"
+            android:text="@string/tipPerGuestsInput" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+
+    <string name="button_reset">RESET</string>
+    <string name="button_calculate">CALCULATE</string>
+    <string name="bill_name">Bill:</string>
+    <string name="numOfGuests_name">Number of Guests:</string>
+    <string name="bill_input">Example: 17.08</string>
+    <string name="numOfGuests_input">Example: 1</string>
+    <string name="tipPercent_name">Tip:</string>
+    <string name="tipPercent_input">Example: 8</string>
+    <string name="percentLabel">Is Percent?</string>
+    <string name="isPercent">Is this a percent?</string>
+    <string name="billName">Total Bill</string>
+    <string name="totalBillInput">\?</string>
+    <string name="billPerGuests">Bill Per Guests</string>
+    <string name="billPerGuestsInput">\?</string>
+    <string name="tipPerGuest">Tip Per Guest</string>
+    <string name="tipPerGuestsInput">\?</string>
+    <string name="isPercent_name">Is Percentage?</string>
+    <string name="tip_amount_name">Tip Amount</string>
+    <string name="totalTip">Total Tip</string>
+</resources>
